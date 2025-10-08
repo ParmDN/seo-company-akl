@@ -49,9 +49,14 @@ export default function Hero() {
           </p>
 
           {/* CTA Button */}
-          <Button size="lg" onClick={() => scrollToSection('contact')} data-testid="button-talk-expert">
-            Talk to an SEO Expert
-          </Button>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button size="lg" onClick={() => scrollToSection('contact')} data-testid="button-talk-expert">
+              Get Started
+            </Button>
+            <Button size="lg" variant="secondary" onClick={() => scrollToSection('services')} data-testid="button-explore-more">
+              Explore More
+            </Button>
+          </div>
 
           {/* Trust Badge */}
           <div className="mt-16">
