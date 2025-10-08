@@ -13,10 +13,12 @@ export default defineConfig({
     },
   },
   root: ".",
+  publicDir: "public",
   build: {
     outDir: "dist",
+    emptyOutDir: true,
     rollupOptions: {
-      input: "./index.html",
+      input: "/index.html",
     },
   },
   server: {
