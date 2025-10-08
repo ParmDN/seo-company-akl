@@ -2,6 +2,12 @@ import { useInView } from 'react-intersection-observer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -44,9 +50,9 @@ export default function CTA() {
 
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
-      <div className="container mx-auto px-4">
-        <div ref={ref} className={`max-w-3xl mx-auto transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="text-center mb-10">
+      <div className="container mx-auto px-4 lg:px-0">
+        <div ref={ref} className={`mx-auto max-w-6xl transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-cta">
               Say hello to future-ready <span className="text-primary-foreground">SEO solutions</span>
             </h2>
@@ -55,22 +61,103 @@ export default function CTA() {
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-lg lg:col-span-1">
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <FormField
+                      control={form.control}
+                      name="fullName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-primary-foreground">Full Name</FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder="John Doe"
+                              className="bg-white text-foreground"
+                              data-testid="input-fullname"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage className="text-primary-foreground/80" />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="phone"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-primary-foreground">Phone</FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder="+64 21 212 4483"
+                              className="bg-white text-foreground"
+                              data-testid="input-phone"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage className="text-primary-foreground/80" />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-primary-foreground">Email</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="email"
+                              placeholder="your@email.com"
+                              className="bg-white text-foreground"
+                              data-testid="input-email"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage className="text-primary-foreground/80" />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="subject"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-primary-foreground">Subject</FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder="SEO Consultation"
+                              className="bg-white text-foreground"
+                              data-testid="input-subject"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage className="text-primary-foreground/80" />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
                   <FormField
                     control={form.control}
-                    name="fullName"
+                    name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-primary-foreground">Full Name</FormLabel>
+                        <FormLabel className="text-primary-foreground">Message</FormLabel>
                         <FormControl>
-                          <Input 
-                            placeholder="John Doe" 
-                            className="bg-white text-foreground"
-                            data-testid="input-fullname"
-                            {...field} 
+                          <Textarea
+                            placeholder="Tell us about your project..."
+                            className="bg-white text-foreground min-h-32"
+                            data-testid="input-message"
+                            {...field}
                           />
                         </FormControl>
                         <FormMessage className="text-primary-foreground/80" />
@@ -78,98 +165,54 @@ export default function CTA() {
                     )}
                   />
 
-                  <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-primary-foreground">Phone</FormLabel>
-                        <FormControl>
-                          <Input 
-                            placeholder="+1 234 567 8900" 
-                            className="bg-white text-foreground"
-                            data-testid="input-phone"
-                            {...field} 
-                          />
-                        </FormControl>
-                        <FormMessage className="text-primary-foreground/80" />
-                      </FormItem>
-                    )}
-                  />
-                </div>
+                  <div className="text-center">
+                    <Button
+                      type="submit"
+                      variant="secondary"
+                      size="lg"
+                      data-testid="button-submit"
+                    >
+                      Send Message
+                    </Button>
+                  </div>
+                </form>
+              </Form>
+            </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-primary-foreground">Email</FormLabel>
-                        <FormControl>
-                          <Input 
-                            type="email"
-                            placeholder="john@example.com" 
-                            className="bg-white text-foreground"
-                            data-testid="input-email"
-                            {...field} 
-                          />
-                        </FormControl>
-                        <FormMessage className="text-primary-foreground/80" />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="subject"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-primary-foreground">Subject</FormLabel>
-                        <FormControl>
-                          <Input 
-                            placeholder="SEO Consultation" 
-                            className="bg-white text-foreground"
-                            data-testid="input-subject"
-                            {...field} 
-                          />
-                        </FormControl>
-                        <FormMessage className="text-primary-foreground/80" />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-primary-foreground">Message</FormLabel>
-                      <FormControl>
-                        <Textarea 
-                          placeholder="Tell us about your project..." 
-                          className="bg-white text-foreground min-h-32"
-                          data-testid="input-message"
-                          {...field} 
-                        />
-                      </FormControl>
-                      <FormMessage className="text-primary-foreground/80" />
-                    </FormItem>
-                  )}
-                />
-
-                <div className="text-center">
-                  <Button 
-                    type="submit" 
-                    variant="secondary"
-                    size="lg"
-                    data-testid="button-submit"
-                  >
-                    Send Message
-                  </Button>
-                </div>
-              </form>
-            </Form>
+            <div className="rounded-2xl border border-white/20 bg-white/5 p-8 shadow-lg lg:col-span-1">
+              <h3 className="text-2xl font-semibold text-primary-foreground mb-4">
+                Frequently Asked Questions
+              </h3>
+              <p className="mb-6 text-primary-foreground/80">
+                Get quick answers to the questions we hear most often from ambitious brands ready to scale.
+              </p>
+              <Accordion type="single" collapsible className="space-y-3">
+                <AccordionItem value="faq-1" className="border border-white/10 rounded-xl bg-white/10">
+                  <AccordionTrigger className="px-4 text-left text-primary-foreground hover:no-underline">
+                    How soon can we expect SEO results?
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4 pb-4 text-sm text-primary-foreground/80">
+                    SEO is a long-term strategy. Most clients begin to see measurable improvements within 3-4 months, with compounding growth thereafter.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="faq-2" className="border border-white/10 rounded-xl bg-white/10">
+                  <AccordionTrigger className="px-4 text-left text-primary-foreground hover:no-underline">
+                    Do you provide custom SEO strategies?
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4 pb-4 text-sm text-primary-foreground/80">
+                    Yes. We assess your industry, competitors, and current performance to craft tailored campaigns aligned with your goals.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="faq-3" className="border border-white/10 rounded-xl bg-white/10">
+                  <AccordionTrigger className="px-4 text-left text-primary-foreground hover:no-underline">
+                    Can you integrate with our marketing team?
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4 pb-4 text-sm text-primary-foreground/80">
+                    Absolutely. We collaborate closely with in-house teams to ensure our SEO roadmap aligns with your broader marketing efforts.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
           </div>
         </div>
       </div>

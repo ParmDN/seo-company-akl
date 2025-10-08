@@ -15,32 +15,32 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      name: 'Brooklyn Simmons',
-      role: 'Co.Founder',
+      name: 'Sarah Mitchell',
+      role: 'Owner, Auckland Dental',
       image: authorImg1,
       rating: 5,
-      text: 'We saw a 300% increase in organic traffic months SEO implemented truly transformed presence Professional.!'
+      text: 'Our Google rankings improved dramatically after working with this team. We now rank #1 for "dentist Auckland CBD" and our new patient inquiries have doubled!'
     },
     {
-      name: 'Isabella Clarke',
-      role: 'Senior Manager',
+      name: 'Michael Chen',
+      role: 'Director, NZ Property Group',
       image: authorImg2,
       rating: 5,
-      text: 'We saw a 300% increase in organic traffic months SEO implemented truly transformed presence Professional.!'
+      text: 'The local SEO expertise here is outstanding. They helped us dominate "property management Auckland" searches and our website leads increased by 250%.'
     },
     {
-      name: 'Alexander Bennett',
-      role: 'Senior Brand Strategist',
+      name: 'Lisa Thompson',
+      role: 'Founder, Auckland Fitness',
       image: authorImg3,
       rating: 5,
-      text: 'We saw a 300% increase in organic traffic months SEO implemented truly transformed presence Professional.!'
+      text: 'Professional, knowledgeable, and results-driven. Our gym now appears at the top of Google for "personal training Auckland" and membership has grown significantly.'
     },
     {
-      name: 'Christopher N.',
-      role: 'Chief Technology Officer',
+      name: 'David Wong',
+      role: 'Managing Director, Auckland Plumbing',
       image: authorImg4,
       rating: 5,
-      text: 'We saw a 300% increase in organic traffic months SEO implemented truly transformed presence Professional.!'
+      text: 'Finally found an SEO company that understands the Auckland market. Our "emergency plumber Auckland" rankings improved tremendously, leading to more emergency calls.'
     }
   ];
 

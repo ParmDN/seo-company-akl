@@ -9,17 +9,17 @@ export default function Features() {
 
   const features = [
     {
-      title: 'Custom SEO reports with',
-      highlight: 'keyword and traffic insights',
-      description: 'Get clear, actionable insights with our tailored SEO reports. We track keyword rankings, traffic sources, user behavior.',
+      title: 'Local SEO reports with',
+      highlight: 'Auckland market insights',
+      description: 'Get clear, actionable insights with our tailored SEO reports. We track local keyword rankings, Auckland traffic sources, user behavior.',
       icon: FileSearch,
       image: featuresImg1,
       reverse: false
     },
     {
-      title: 'Strategic link building for',
-      highlight: 'higher domain authority',
-      description: 'Build quality backlinks that boost your website authority and improve search rankings with our proven link building strategies.',
+      title: 'Local link building for',
+      highlight: 'Auckland businesses',
+      description: 'Build quality backlinks from trusted local sources that boost your website authority and improve search rankings in New Zealand.',
       icon: Globe,
       image: featuresImg2,
       reverse: true
@@ -40,7 +40,7 @@ export default function Features() {
         <div ref={ref} className={`text-center mb-12 transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h3 className="text-primary text-lg font-semibold mb-2" data-testid="heading-features-label">Our features</h3>
           <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-features-main">
-            Comprehensive features for complete <span className="text-primary">SEO success</span>
+            Local SEO features designed for <span className="text-primary">Auckland businesses</span>
           </h2>
         </div>
 

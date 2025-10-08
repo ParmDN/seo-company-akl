@@ -1,0 +1,115 @@
+/* Custom CSS for SEO Auckland website */
+/* Add your custom styles here */
+
+/* Example custom styles - you can modify or add your own */
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Custom hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom button styles */
+.btn-primary-custom {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Custom text gradients */
+.text-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom spacing utilities */
+.spacing-section {
+  padding: 5rem 0;
+}
+
+.spacing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Custom responsive utilities */
+@media (max-width: 768px) {
+  .spacing-section {
+    padding: 3rem 0;
+  }
+
+  .btn-primary-custom {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Add your custom CSS below this line */
+
+/* Example: Custom hero section styling */
+/* .hero-custom {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+} */
+
+/* Example: Custom card styling */
+/* .card-custom {
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+} */
+
+/* Example: Custom testimonial styling */
+/* .testimonial-custom {
+  position: relative;
+} */
+
+/* .testimonial-custom::before {
+  content: '"';
+  font-size: 4rem;
+  color: rgba(102, 126, 234, 0.2);
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  font-family: Georgia, serif;
+} */
+
+
+#services button{
+  background-color: #dddddd;
+}
+
+#services button[aria-selected="true"]{
+  background-color: #114551;
+}

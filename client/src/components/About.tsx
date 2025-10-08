@@ -64,27 +64,27 @@ export default function About() {
                   <AvatarFallback>T3</AvatarFallback>
                 </Avatar>
               </div>
-              <p className="text-sm text-muted-foreground" data-testid="text-expert-team">Expert SEO Team</p>
+              <p className="text-sm text-muted-foreground" data-testid="text-expert-team">Auckland's SEO Experts</p>
             </div>
 
             <h3 className="text-primary text-lg font-semibold mb-2" data-testid="heading-about-label">About Us</h3>
             <h2 className="text-3xl md:text-4xl font-bold mb-6" data-testid="heading-about-main">
-              Driving organic growth with <span className="text-primary">proven SEO strategies</span>
+              Auckland's leading SEO agency <span className="text-primary">driving local success</span>
             </h2>
             <p className="text-muted-foreground mb-4" data-testid="text-about-p1">
-              We specialize in delivering measurable results through data-driven SEO strategies that increase your online visibility and drive sustainable growth.
+              Based in the heart of Auckland, we specialize in helping local businesses dominate Google search results and connect with their target audience in New Zealand's largest market.
             </p>
             <p className="text-muted-foreground mb-6" data-testid="text-about-p2">
-              Our team of experts combines technical expertise with creative thinking to help businesses of all sizes achieve their digital marketing goals.
+              Our team combines deep knowledge of the local market with cutting-edge SEO techniques to deliver measurable results for businesses across Auckland and beyond.
             </p>
 
             <div className="grid grid-cols-2 gap-6 mt-8">
               <div className="text-center p-6 bg-card rounded-lg border border-card-border" data-testid="stat-projects">
-                <h3 className="text-3xl font-bold text-primary mb-2">500+</h3>
-                <p className="text-muted-foreground">Projects Completed</p>
+                <h3 className="text-3xl font-bold text-primary mb-2">150+</h3>
+                <p className="text-muted-foreground">Auckland Businesses Served</p>
               </div>
               <div className="text-center p-6 bg-card rounded-lg border border-card-border" data-testid="stat-clients">
-                <h3 className="text-3xl font-bold text-primary mb-2">98%</h3>
+                <h3 className="text-3xl font-bold text-primary mb-2">95%</h3>
                 <p className="text-muted-foreground">Client Satisfaction</p>
               </div>
             </div>

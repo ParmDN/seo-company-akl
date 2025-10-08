@@ -28,10 +28,10 @@ export default function Header() {
         <nav className={`flex items-center justify-between h-20 px-6 rounded-full bg-card shadow-lg transition-all duration-300 ${isScrolled ? 'shadow-xl' : ''}`}>
           <div className="flex items-center gap-2" data-testid="logo">
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-white text-xl">R</span>
+              <span className="text-white text-xl font-bold">S</span>
             </div>
             <span className="text-xl font-semibold">
-              Rank<span className="text-primary">.io</span>
+              SEO<span className="text-primary">Auckland</span>
             </span>
           </div>
 
@@ -41,7 +41,7 @@ export default function Header() {
             <button onClick={() => scrollToSection('about')} className="text-foreground hover-elevate px-3 py-2 rounded-md transition-colors" data-testid="link-about">About Us</button>
             <button onClick={() => scrollToSection('services')} className="text-foreground hover-elevate px-3 py-2 rounded-md transition-colors" data-testid="link-services">Services</button>
             <button onClick={() => scrollToSection('testimonials')} className="text-foreground hover-elevate px-3 py-2 rounded-md transition-colors" data-testid="link-testimonials">Testimonials</button>
-            <button onClick={() => scrollToSection('blog')} className="text-foreground hover-elevate px-3 py-2 rounded-md transition-colors" data-testid="link-blog">Blog</button>
+            <button onClick={() => scrollToSection('why-choose-us')} className="text-foreground hover-elevate px-3 py-2 rounded-md transition-colors" data-testid="link-why-choose-us">Why Choose Us</button>
             <button onClick={() => scrollToSection('contact')} className="text-foreground hover-elevate px-3 py-2 rounded-md transition-colors" data-testid="link-contact">Contact</button>
             <Button onClick={() => scrollToSection('contact')} data-testid="button-get-started">Get Started Today</Button>
           </div>
@@ -63,7 +63,7 @@ export default function Header() {
             <button onClick={() => scrollToSection('about')} className="block w-full text-left px-4 py-2 hover-elevate rounded-md" data-testid="mobile-link-about">About Us</button>
             <button onClick={() => scrollToSection('services')} className="block w-full text-left px-4 py-2 hover-elevate rounded-md" data-testid="mobile-link-services">Services</button>
             <button onClick={() => scrollToSection('testimonials')} className="block w-full text-left px-4 py-2 hover-elevate rounded-md" data-testid="mobile-link-testimonials">Testimonials</button>
-            <button onClick={() => scrollToSection('blog')} className="block w-full text-left px-4 py-2 hover-elevate rounded-md" data-testid="mobile-link-blog">Blog</button>
+            <button onClick={() => scrollToSection('why-choose-us')} className="block w-full text-left px-4 py-2 hover-elevate rounded-md" data-testid="mobile-link-why-choose-us">Why Choose Us</button>
             <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-4 py-2 hover-elevate rounded-md" data-testid="mobile-link-contact">Contact</button>
             <div className="px-4 pt-2">
               <Button className="w-full" onClick={() => scrollToSection('contact')} data-testid="mobile-button-get-started">Get Started Today</Button>

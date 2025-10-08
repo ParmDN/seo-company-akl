@@ -12,14 +12,14 @@ export default function Services() {
       id: 'keyword',
       title: 'Keyword Research',
       icon: Search,
-      description: 'Create valuable, engaging content that attracts, informs, and converts your target audience to drive long-term SEO success.',
+      description: 'Identify high-value keywords that drive targeted traffic to your Auckland business website.',
       offerings: [
-        'Content Strategy & Planning',
-        'Blog & Article Writing',
-        'Website Content Creation',
-        'SEO Content Optimization'
+        'Local Keyword Analysis',
+        'Competitor Keyword Research',
+        'Search Volume & Difficulty Assessment',
+        'Long-tail Keyword Discovery'
       ],
-      stats: '28,100'
+      stats: '85%'
     },
     {
       id: 'copywriting',
@@ -32,7 +32,7 @@ export default function Services() {
         'Website Content Creation',
         'SEO Content Optimization'
       ],
-      stats: '28,100'
+      stats: '92%'
     },
     {
       id: 'content',
@@ -45,7 +45,7 @@ export default function Services() {
         'Website Content Creation',
         'SEO Content Optimization'
       ],
-      stats: '28,100'
+      stats: '78%'
     },
     {
       id: 'analytics',
@@ -58,7 +58,7 @@ export default function Services() {
         'Custom Reports',
         'ROI Measurement'
       ],
-      stats: '28,100'
+      stats: '95%'
     },
     {
       id: 'technical',
@@ -71,7 +71,7 @@ export default function Services() {
         'Schema Markup',
         'Crawlability Analysis'
       ],
-      stats: '28,100'
+      stats: '88%'
     }
   ];
 
@@ -83,7 +83,7 @@ export default function Services() {
         <div ref={ref} className={`text-center mb-12 transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h3 className="text-primary text-lg font-semibold mb-2" data-testid="heading-services-label">Our Services</h3>
           <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-services-main">
-            Grow faster with our proven <span className="text-primary">SEO services</span>
+            Auckland businesses grow faster with our proven <span className="text-primary">SEO services</span>
           </h2>
         </div>
 
@@ -118,7 +118,7 @@ export default function Services() {
                 {/* What We Offer Card */}
                 <div className="bg-card p-8 rounded-lg border border-card-border" data-testid={`card-offerings-${service.id}`}>
                   <h3 className="text-xl font-semibold mb-3" data-testid="heading-what-we-offer">What We Offer</h3>
-                  <p className="text-muted-foreground mb-4">Create valuable, engaging content that attracts, informs,</p>
+                  <p className="text-muted-foreground mb-4">Comprehensive SEO solutions tailored for Auckland businesses</p>
                   <ul className="space-y-2">
                     {service.offerings.map((offering, index) => (
                       <li key={index} className="flex items-start gap-2" data-testid={`offering-${service.id}-${index}`}>

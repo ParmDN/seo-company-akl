@@ -35,7 +35,7 @@ export default function Hero() {
                 <AvatarFallback>C3</AvatarFallback>
               </Avatar>
             </div>
-            <p className="text-sm text-muted-foreground" data-testid="text-client-count">200+ startup chose SEO</p>
+            <p className="text-sm text-muted-foreground" data-testid="text-client-count">50+ Auckland businesses chose our SEO</p>
           </div>
 
           {/* Main Heading */}
@@ -45,7 +45,7 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto" data-testid="text-hero-subtitle">
-            Our SEO strategies are built to perform. From increasing your search engine rankings to driving qualified traffic and boosting conversions
+            Auckland's leading SEO company. We help local businesses dominate Google search results with proven strategies that drive qualified traffic and boost conversions.
           </p>
 
           {/* CTA Button */}
