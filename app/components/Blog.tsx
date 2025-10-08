@@ -1,3 +1,4 @@
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ArrowRight } from 'lucide-react';
 import blogImg1 from '@assets/stock_images/digital_marketing_da_7eaf53cc.jpg';

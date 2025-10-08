@@ -1,3 +1,4 @@
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import aboutImg from '@assets/stock_images/professional_busines_4d849f3d.jpg';

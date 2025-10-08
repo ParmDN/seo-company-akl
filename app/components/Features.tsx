@@ -1,3 +1,4 @@
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Button } from '@/components/ui/button';
 import { FileSearch, Globe, Zap } from 'lucide-react';

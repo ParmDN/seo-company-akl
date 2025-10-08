@@ -1,3 +1,4 @@
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import heroIllustration from '@assets/image.webp';
 import { Button } from '@/components/ui/button';
