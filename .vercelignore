@@ -1,7 +1,10 @@
 # Ignore server files for frontend-only deployment
 server/
-*.ts
-*.js
+drizzle.config.ts
+shared/
+src/
+
+# Keep client files
 !client/
 !package.json
 !vite.config.ts
@@ -9,10 +12,4 @@ server/
 !tsconfig.json
 !tailwind.config.js
 !postcss.config.js
-!public/
 !attached_assets/
-
-# Keep only what's needed for React build
-!client/src/
-!client/index.html
-!client/public/
