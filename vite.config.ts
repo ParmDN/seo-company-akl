@@ -10,6 +10,7 @@ export default defineConfig({
       "@assets": path.resolve("attached_assets"),
     },
   },
+  root: "client",
   build: {
     outDir: "dist",
   },
