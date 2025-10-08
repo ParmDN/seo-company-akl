@@ -23,11 +23,16 @@ export default function Header() {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background shadow-md' : 'bg-transparent'}`}>
-      <div className="container mx-auto px-4">
-        <nav className="flex items-center justify-between h-20">
-          <div className="text-2xl font-bold text-primary" data-testid="logo">
-            Rankio
+    <header className="fixed top-0 left-0 right-0 z-50 pt-4 px-4">
+      <div className="container mx-auto">
+        <nav className={`flex items-center justify-between h-20 px-6 rounded-full bg-card shadow-lg transition-all duration-300 ${isScrolled ? 'shadow-xl' : ''}`}>
+          <div className="flex items-center gap-2" data-testid="logo">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+              <span className="text-white text-xl">R</span>
+            </div>
+            <span className="text-xl font-semibold">
+              Rank<span className="text-primary">.io</span>
+            </span>
           </div>
 
           {/* Desktop Menu */}
@@ -53,7 +58,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-background border-t py-4 space-y-2" data-testid="mobile-menu">
+          <div className="lg:hidden bg-card rounded-b-3xl mt-2 border-t py-4 space-y-2 shadow-lg" data-testid="mobile-menu">
             <button onClick={() => scrollToSection('hero')} className="block w-full text-left px-4 py-2 hover-elevate rounded-md" data-testid="mobile-link-home">Home</button>
             <button onClick={() => scrollToSection('about')} className="block w-full text-left px-4 py-2 hover-elevate rounded-md" data-testid="mobile-link-about">About Us</button>
             <button onClick={() => scrollToSection('services')} className="block w-full text-left px-4 py-2 hover-elevate rounded-md" data-testid="mobile-link-services">Services</button>

@@ -34,7 +34,14 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* About Column */}
           <div>
-            <div className="text-2xl font-bold text-primary mb-4" data-testid="logo-footer">Rankio</div>
+            <div className="flex items-center gap-2 mb-4" data-testid="logo-footer">
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                <span className="text-white text-xl">R</span>
+              </div>
+              <span className="text-xl font-semibold">
+                Rank<span className="text-primary">.io</span>
+              </span>
+            </div>
             <p className="text-muted-foreground mb-6" data-testid="text-footer-about">
               Smart, scalable SEO solutions drive traffic and conversions fast.
             </p>
